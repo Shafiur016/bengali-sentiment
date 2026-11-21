@@ -1,0 +1,8 @@
+services:
+  api:
+    build: .
+    ports: ["5000:5000"]
+    volumes:
+      - ./artifacts:/app/artifacts:ro
+    environment:
+      MODEL_FILE: /app/artifacts/sentiment_cnn_lstm.pt
